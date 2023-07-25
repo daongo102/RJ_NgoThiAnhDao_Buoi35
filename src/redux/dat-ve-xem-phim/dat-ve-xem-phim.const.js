@@ -1,0 +1,3 @@
+export const BOOKING_TICKET = {
+    DAT_GHE: "BOOKING_TICKET/DAT_GHE",
+};

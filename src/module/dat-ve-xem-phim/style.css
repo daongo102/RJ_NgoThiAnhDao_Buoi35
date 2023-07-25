@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Pony';
+    src: url('../../../public/fonts/Pony.ttf');
+}
+
+.dat-ve-xem-phim{
+    font-family: 'Pony';
+}
+
+
+.ghe{
+    border: 2px solid orange;
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+}
+
+.rowNumber{
+    /* font-size: 25px; */
+    width: 30px;
+    height: 30px;
+    background: none;
+    border:none;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    font-size: 25px;
+    color: yellow;
+    text-align: center;
+    
+}
+.firstChar{
+    color: yellow;
+    font-size: 35px;
+    margin-right: 15px;
+
+}
+
+.screen{
+    border-bottom: 50px solid rgb(255, 159, 95);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 50;
+    width:90%;
+    filter: drop-shadow(4px 30px 20px rgba(255, 255, 255, 0.5));
+    font-size: 25px;
+    color: #fff;
+}
+
+
+.gheDuocChon {
+    border: 3px solid orange;
+
+    background: orange;
+    color: #000;
+
+    cursor: no-drop !important;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+
+}
+
+.gheDangChon {
+    background: rgb(109, 238, 109);
+    border: 3px solid rgb(109, 238, 109);
+   
+
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.gheChuaChon{
+    background: white;
+    border: 2px solid orange;
+ 
+
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+}
+
