@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-
-export default class ThongTinDatGhe extends Component {
+import { connect } from "react-redux";
+import { huyGheCreator } from "../../../../redux/dat-ve-xem-phim/dat-ve-xem-phim.action";
+class ThongTinDatGhe extends Component {
     render() {
+        console.log(this.props);
         return (
             <div>
                 <div className="mt-3">
@@ -13,7 +15,7 @@ export default class ThongTinDatGhe extends Component {
                         >
                             Ghế đã đặt
                         </span>
-                    </div>    
+                    </div>
 
                     <div className="mt-2">
                         <button className="gheDangChon"></button>
@@ -23,7 +25,7 @@ export default class ThongTinDatGhe extends Component {
                         >
                             Ghế đang đặt
                         </span>
-                    </div>           
+                    </div>
 
                     <div className="mt-2">
                         <button className="gheChuaChon"></button>
@@ -44,17 +46,22 @@ export default class ThongTinDatGhe extends Component {
                                 <th>HỦY</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Số ghế</td>
-                                <td>Giá</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Số ghế</td>
-                                <td>Giá</td>
-                                <td></td>
-                            </tr>
+                        <tbody className="text-warning">
+                            {this.props.danhSachGheDangDat.map(
+                                (gheDangDat, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td>{gheDangDat.soGhe}</td>
+                                            <td>{gheDangDat.gia}</td>
+                                            <td>
+                                                <button onClick={()=>{
+                                                    this.props.dispatch(huyGheCreator(gheDangDat.soGhe))
+                                                }}>Hủy</button>
+                                            </td>
+                                        </tr>
+                                    );
+                                },
+                            )}
                         </tbody>
                     </table>
                 </div>
@@ -62,3 +69,11 @@ export default class ThongTinDatGhe extends Component {
         );
     }
 }
+
+const mapStateToProps = (rootReducer) => {
+    return {
+        danhSachGheDangDat: rootReducer.bookingTicketReducer.danhSachGheDangDat,
+    };
+};
+
+export default connect(mapStateToProps)(ThongTinDatGhe);

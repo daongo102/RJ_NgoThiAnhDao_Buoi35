@@ -6,3 +6,10 @@ export const datGheCreator = (payload) => {
         payload,
     };
 };
+
+export const huyGheCreator = (payload) => {
+    return {
+        type: BOOKING_TICKET.HUY_GHE,
+        payload,
+    };
+};

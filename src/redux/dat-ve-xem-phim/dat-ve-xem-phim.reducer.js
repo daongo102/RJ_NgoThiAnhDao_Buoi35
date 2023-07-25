@@ -20,6 +20,17 @@ export const bookingTicketReducer = (state = STATE_DEFAULT, action) => {
 
             return { ...state };
         }
+        case BOOKING_TICKET.HUY_GHE: {
+            let danhSachGheDangDatUpdate = [...state.danhSachGheDangDat];
+            let index = danhSachGheDangDatUpdate.findIndex(
+                (gheDangDat) => gheDangDat.soGhe === action.soGhe,
+            );
+            if (index === -1) {
+                danhSachGheDangDatUpdate.splice(index, 1);
+            }
+            state.danhSachGheDangDat = danhSachGheDangDatUpdate;
+            return { ...state };
+        }
         default:
             return state;
     }
