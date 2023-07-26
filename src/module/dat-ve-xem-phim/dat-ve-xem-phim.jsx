@@ -25,6 +25,7 @@ export default class DatVeXemPhim extends Component {
                     height: "100%",
                     backgroundImage: "url(./img/dat-ve-xem-phim/bgmovie.jpg)",
                     backgroundSize: "100%",
+                            
                 }}
             >
                 <div
@@ -33,6 +34,8 @@ export default class DatVeXemPhim extends Component {
                         width: "100%",
                         height: "100%",
                         backgroundColor: "rgba(0,0,0,0.6)",
+                        overflowY: "auto",
+                        overflowX: "hidden",
                     }}
                 >
                     <div className="text-warning text-center" style={{ fontSize: 30 }}>

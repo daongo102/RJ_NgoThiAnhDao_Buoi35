@@ -20,11 +20,11 @@ class HangGhe extends Component {
             }
             return (
                 <button
-                    onClick={() => {
+                    onClick={() => {               
                         this.props.handleDatGhe(ghe);
                     }}
                     disabled={disabled}
-                    className={`ghe ${cssGheDaDat} ${cssGheDangDat}`}
+                    className={`${cssGheDaDat} ${cssGheDangDat} ghe`}
                     key={index}
                 >
                     {ghe.soGhe}
@@ -60,7 +60,6 @@ class HangGhe extends Component {
     };
 
     render() {
-        console.log(this.props)
         return (
             <div
                 className="text-light text-left"
